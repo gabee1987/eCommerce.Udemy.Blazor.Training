@@ -21,7 +21,6 @@
     width: 50%;
     margin: 0 auto;
     margin-top: 3rem;
-    color: #3C4562;
 }
 
     .error-box h1 {
@@ -42,12 +41,12 @@
 
     .error-box-header i {
         font-size: 8rem;
-        color: #fff;
+        color: #fff; /*TODO needs to fix the color with variable use*/
     }
 
 .error-box-body {
-    color: var(--materialGrey);
-    background-color: #fff;
+    color: #3C4562; /*TODO needs to fix the color with variable use*/
+    background-color: #fff; /*TODO needs to fix the color with variable use*/
     text-align: center;
     padding: 5rem;
     border-radius: 0px 0px 15px 15px;
