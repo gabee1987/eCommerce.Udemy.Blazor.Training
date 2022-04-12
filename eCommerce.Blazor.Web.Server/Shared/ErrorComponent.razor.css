@@ -1,0 +1,54 @@
+﻿/* CSS code by Gabor Koncz */
+
+
+/*--------------- COLOR VALUES ---------------*/
+:root {
+    --materialRed: #f65656;
+    --materialGrey: #3C4562;
+}
+
+
+
+
+/*--------------------------------------------*/
+/*---------------- ERROR BOX -----------------*/
+/*--------------------------------------------*/
+
+.error-box {
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 70px;
+    height: 30%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    color: #3C4562;
+}
+
+    .error-box h1 {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    .error-box h3 {
+        /*font-size: 4rem;*/
+    }
+
+.error-box-header {
+    border-radius: 15px 15px 0px 0px;
+    background-color: #f65656; /*TODO needs to fix the color with variable use*/
+    text-align: center;
+    padding: 2rem 4rem;
+}
+
+    .error-box-header i {
+        font-size: 8rem;
+        color: #fff;
+    }
+
+.error-box-body {
+    color: var(--materialGrey);
+    background-color: #fff;
+    text-align: center;
+    padding: 5rem;
+    border-radius: 0px 0px 15px 15px;
+}

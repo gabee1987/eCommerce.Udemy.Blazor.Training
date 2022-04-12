@@ -1,7 +1,13 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+/*------------------- FONTS ------------------*/
+@font-face {
+    font-family: "quicksand";
+    src: url("../wwwroot/fonts/Quicksand-VariableFont_wght.ttf");
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'quicksand', Helvetica, Arial, sans-serif;
 }
 
 h1:focus {
