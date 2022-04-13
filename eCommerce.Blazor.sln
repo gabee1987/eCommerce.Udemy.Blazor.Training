@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32317.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Blazor.Web.Server", "eCommerce.Blazor.Web.Server\eCommerce.Blazor.Web.Server.csproj", "{68641ED1-F9BA-4D6E-9CF4-76A8CFA07189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Blazor.Web.Assembly", "eCommerce.Blazor.Web.Assembly\eCommerce.Blazor.Web.Assembly.csproj", "{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Blazor.Web.Assembly", "eCommerce.Blazor.Web.Assembly\eCommerce.Blazor.Web.Assembly.csproj", "{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Blazor.Web.Models", "eCommerce.Blazor.Web.Models\eCommerce.Blazor.Web.Models.csproj", "{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
