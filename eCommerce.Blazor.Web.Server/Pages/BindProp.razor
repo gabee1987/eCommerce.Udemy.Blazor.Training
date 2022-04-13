@@ -1,7 +1,23 @@
 ﻿@page "/bindProp"
 
 
-<h3>BindProp</h3>
+<h1>BindProp Page</h1>
+
+<div class="container">
+    <br />
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <h5 class="card-title">Binded property</h5>
+        <div style="display: flex;">
+            <label>Product name: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.Name</p>
+        </div>
+        <div style="display: flex;">
+            <label>Is active? &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.IsActive</p>
+        </div>
+      </div>
+    </div>
+    
+</div>
 
 @code {
 
