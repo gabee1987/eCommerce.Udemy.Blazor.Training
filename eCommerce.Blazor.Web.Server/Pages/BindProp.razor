@@ -17,6 +17,13 @@
         <div style="display: flex;">
             <label>Price: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.Price</p>
         </div>
+        <div style="display: flex;">
+            <label>Property selected: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@_selectedProp</p>
+        </div>
+        @if(!String.IsNullOrWhiteSpace( _selectedProp ))
+        {
+                <p>Property Value: @Product.ProductProperties.FirstOrDefault( p => p.Key == _selectedProp ).Value</p>
+        }
 
         <br />
         <p>Update the value on input:</p>
@@ -37,7 +44,7 @@
         <p>Update the value on save:</p>
         <div class="input-group mb-3">
           <label class="input-group-text" for="price-input-onsave">New price:</label>
-          <input type="number" id="price-input-onsave" class="form-control" aria-label="Price input" aria-describedby="price-input-button-onsave" @bind-value=@PriceCache>
+          <input type="number" id="price-input-onsave" class="form-control" aria-label="Price input" aria-describedby="price-input-button-onsave" @bind-value=@_priceCache>
           <button class="btn btn-success" type="button" id="price-input-button-onsave" @onclick="OnSave">Save</button>
         </div>
 
@@ -60,6 +67,16 @@
               </label>
             </div>
         </div>
+
+        <br />
+        <br />
+        <p>Product properties:</p>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" @bind="_selectedProp">
+            @foreach ( var prop in Product.ProductProperties )
+            {
+                    <option value="@prop.Key">@prop.Value</option>
+            }
+        </select>
       </div>
     </div>
     
