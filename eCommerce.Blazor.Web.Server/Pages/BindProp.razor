@@ -40,6 +40,26 @@
           <input type="number" id="price-input-onsave" class="form-control" aria-label="Price input" aria-describedby="price-input-button-onsave" @bind-value=@PriceCache>
           <button class="btn btn-success" type="button" id="price-input-button-onsave" @onclick="OnSave">Save</button>
         </div>
+
+        <br />
+        <br />
+        <small>Using virtual property:</small>
+        <div style="display: flex;">
+            <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.IsActiveDisplayHelper</p>
+        </div>
+        <small>Or using a ternary operator in razor:</small>
+        <div style="display: flex;">
+            <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@(Product.IsActive?"Active":"Not Active")</p>
+        </div>
+        <p>Update the active state:</p>
+        <div class="input-group mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="isactivecheck" @bind-value=@Product.IsActive checked="@(Product.IsActive?"checked":null)" >
+              <label class="form-check-label" for="isactivecheck">
+                Is Active?
+              </label>
+            </div>
+        </div>
       </div>
     </div>
     
