@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Blazor.Web.Server
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Blazor.Web.Assembly", "eCommerce.Blazor.Web.Assembly\eCommerce.Blazor.Web.Assembly.csproj", "{ED713EEA-B8AD-4E97-A04A-2E1D0CBA4ECC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Blazor.Web.Models", "eCommerce.Blazor.Web.Models\eCommerce.Blazor.Web.Models.csproj", "{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eCommerce.Blazor.Web.Models", "eCommerce.Blazor.Web.Models\eCommerce.Blazor.Web.Models.csproj", "{E4D8CC73-71F9-44B6-BDB0-2BFBDBBA4364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
