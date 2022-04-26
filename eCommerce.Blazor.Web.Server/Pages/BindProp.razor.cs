@@ -35,6 +35,7 @@ namespace eCommerce.Blazor.Web.Server.Pages
                 Id                = 1,
                 Name              = "Midnight Blaze",
                 IsActive          = false,
+                Price             = 17.45,
                 ProductProperties = new()
                 {
                     new DemoProductProp { Id = 1, Key = "Flavor", Value = "Rose" },
@@ -48,6 +49,7 @@ namespace eCommerce.Blazor.Web.Server.Pages
                 Id                = 1,
                 Name              = "Blossom Lily",
                 IsActive          = true,
+                Price             = 23.95,
                 ProductProperties = new()
                 {
                     new DemoProductProp { Id = 1, Key = "Flavor", Value = "Lily" },

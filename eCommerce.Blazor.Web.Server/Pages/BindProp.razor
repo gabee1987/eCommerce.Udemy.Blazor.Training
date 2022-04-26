@@ -59,7 +59,7 @@
                       <button class="btn btn-success" type="button" id="price-input-button-onsave" @onclick="OnSave">Save</button>
                     </div>
                     
-                    <p>Update the active state:</p>
+                    @*<p>Update the active state:</p>*@
                     <div class="input-group mb-3">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="isactivecheck" @bind-value=@Product.IsActive checked="@(Product.IsActive?"checked":null)" >
@@ -79,7 +79,58 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <h4 class="table-title">Product table</h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Active?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ( var prod in Products )
+                    {
+                        <tr>
+                          <th scope="row">@prod.Id</th>
+                          <td>
+                              <input type="text" class="form-control" @bind-value=@prod.Name @bind-value:event="oninput" /> @*@oninput="(e)=> prod.Name = e.Value.ToString()"*@
+                          </td>
+                          <td>
+                              <input type="number" class="form-control" @bind-value=@prod.Price /> 
+                          </td>
+                          <td>
+                              <input type="checkbox" class="form-check-input" @bind-value=@prod.IsActive checked="@(prod.IsActive?"checked":null)" /> 
+                          </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h4 class="table-title">Product table summary</h4>
+            <ul class="list-group list-group-numbered">
+                @foreach ( var prod in Products )
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-start" aria-current="true">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">@prod.Name</div>
+                          <span>€</span>@prod.Price
+                        </div>
+                        <span class="badge bg-primary rounded-pill" style="display: @(prod.IsActive?"inline-block":"none")">@(prod.IsActive?"Active":"null")</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
 </div>
 
 @code {
