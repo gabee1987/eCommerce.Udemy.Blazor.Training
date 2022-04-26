@@ -8,7 +8,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Product summary</h5>
+                    <h4 class="card-title">Product summary</h4>
                     <div style="display: flex;">
                         <label>Product name: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.Name</p>
                     </div>
@@ -23,8 +23,16 @@
                     </div>
                     @if(!String.IsNullOrWhiteSpace( _selectedProp ))
                     {
-                            <p>Property Value: @Product.ProductProperties.FirstOrDefault( p => p.Key == _selectedProp ).Value</p>
+                            <p>Property Value: <span style="font-weight: 600; color: dodgerblue;">@Product.ProductProperties.FirstOrDefault( p => p.Key == _selectedProp ).Value</span></p>
                     }
+                    <small>Using virtual property:</small>
+                    <div style="display: flex;">
+                        <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.IsActiveDisplayHelper</p>
+                    </div>
+                    <small>Or using a ternary operator in razor:</small>
+                    <div style="display: flex;">
+                        <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@(Product.IsActive?"Active":"Not Active")</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,8 +49,6 @@
                         </span>
                     </div>
 
-                    <br />
-                    <br />
                     <div style="display: flex;">
                         <label>Price: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.Price</p>
                     </div>
@@ -52,17 +58,7 @@
                       <input type="number" id="price-input-onsave" class="form-control" aria-label="Price input" aria-describedby="price-input-button-onsave" @bind-value=@_priceCache>
                       <button class="btn btn-success" type="button" id="price-input-button-onsave" @onclick="OnSave">Save</button>
                     </div>
-
-                    <br />
-                    <br />
-                    <small>Using virtual property:</small>
-                    <div style="display: flex;">
-                        <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@Product.IsActiveDisplayHelper</p>
-                    </div>
-                    <small>Or using a ternary operator in razor:</small>
-                    <div style="display: flex;">
-                        <label>This product is: &nbsp;</label><p class="card-text" style="font-weight: 600; color: dodgerblue;">@(Product.IsActive?"Active":"Not Active")</p>
-                    </div>
+                    
                     <p>Update the active state:</p>
                     <div class="input-group mb-3">
                         <div class="form-check">
@@ -73,8 +69,6 @@
                         </div>
                     </div>
 
-                    <br />
-                    <br />
                     <p>Product properties:</p>
                     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" @bind="_selectedProp">
                         @foreach ( var prop in Product.ProductProperties )
