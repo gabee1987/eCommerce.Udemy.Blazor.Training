@@ -14,6 +14,6 @@ namespace eCommerce.Blazor.Web.Models.Models
         public double Price { get; set; }
         public virtual string IsActiveDisplayHelper => IsActive ? "Active" : "Not Active";
 
-        public IEnumerable<DemoProductProp> ProductProperties { get; set; }
+        public List<DemoProductProp> ProductProperties { get; set; }
     }
 }
