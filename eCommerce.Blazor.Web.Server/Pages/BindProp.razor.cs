@@ -12,10 +12,10 @@ namespace eCommerce.Blazor.Web.Server.Pages
         {
             Product = new DemoProduct()
             {
-                Id = 1,
-                IsActive = true,
-                Name = "Rose Candle",
-                Price = 19.99,
+                Id                = 1,
+                IsActive          = true,
+                Name              = "Rose Candle",
+                Price             = 19.99,
                 ProductProperties = new List<DemoProductProp>()
                 {
                     new DemoProductProp() { Id = 0, Key = "Color", Value = "Black" },
