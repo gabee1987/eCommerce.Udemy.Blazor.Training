@@ -1,0 +1,41 @@
+﻿/* CSS code by Gabor Koncz */
+
+.demo-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-auto-flow: dense;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product-card {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 5%), 5px 5px 10px -1px rgb(0 0 0 / 5%);
+}
+
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price {
+    color: #006ee6;
+}
+
+.property-name {
+    font-weight: 600;
+}
+
+.property-value {
+    margin-left: 1rem;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    /*border-top: 1px solid rgba(0,0,0,.125);*/
+}
+
+    .card-buttons a {
+        margin: 0 0.5rem;
+        
+    }
