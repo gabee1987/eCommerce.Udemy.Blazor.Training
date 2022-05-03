@@ -32,7 +32,7 @@ namespace eCommerce.Blazor.Web.Server.Pages
         {
             Products.Add( new()
             {
-                Id                = 1,
+                Id                = 2,
                 Name              = "Midnight Blaze",
                 IsActive          = false,
                 Price             = 17.45,
