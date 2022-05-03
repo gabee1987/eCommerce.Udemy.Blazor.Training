@@ -57,7 +57,7 @@ namespace eCommerce.Blazor.Web.Server.Pages
             } );
         }
 
-        protected void FavouriteCOuntUpdate( bool isSelected )
+        protected void FavouriteCountUpdate( bool isSelected )
         {
             if( isSelected )
                 _SelectedFavouritesCount++;
