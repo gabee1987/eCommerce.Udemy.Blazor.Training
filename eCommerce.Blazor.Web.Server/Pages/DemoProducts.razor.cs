@@ -4,6 +4,7 @@ namespace eCommerce.Blazor.Web.Server.Pages
 {
     public partial class DemoProducts
     {
+        private int _SelectedFavouritesCount { get; set; } = 0;
         public List<DemoProduct> Products { get; set; }
 
         public DemoProducts()
@@ -54,6 +55,14 @@ namespace eCommerce.Blazor.Web.Server.Pages
                     new DemoProductProp { Id = 3, Key = "Color", Value = "Red" }
                 }
             } );
+        }
+
+        protected void FavouriteCOuntUpdate( bool isSelected )
+        {
+            if( isSelected )
+                _SelectedFavouritesCount++;
+            else
+                _SelectedFavouritesCount--;
         }
     }
 }

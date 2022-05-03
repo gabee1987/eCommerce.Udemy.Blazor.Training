@@ -17,6 +17,10 @@
     justify-content: space-between;
 }
 
+.favourites-counter {
+    padding: 1rem 0rem;
+}
+
 .product-price {
     color: #006ee6;
 }
