@@ -1,0 +1,35 @@
+﻿<div class="card Productuct-card">
+    <div class="card-body">
+        <div class="card-title-container">
+            <h4 class="card-title">@Product.Name</h4>
+            <h5 class="Productuct-price"><span>€</span>@Product.Price</h5>
+        </div>                       
+    <div class="input-group mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="isactivecheck" @bind-value=@Product.IsActive checked="@(Product.IsActive?"checked":null)" >
+            <label class="form-check-label" for="isactivecheck">
+            Show properties
+            </label>
+        </div>
+    </div>
+    </div>
+
+    <ul class="list-group list-group-flush" style="display: @(Product.IsActive?"flex":"none")">
+        @foreach ( var prop in Product.ProductProperties )
+        {
+            <li class="list-group-item">
+                <span class="property-name">@prop.Key</span>:<span class="property-value">@prop.Value</span>
+            </li>
+        }
+    </ul>
+
+    @*<p class="card-text"></p>*@
+
+    <div class="card-footer card-buttons">
+        <_EditDeleteButtonComponent ProductIsActive="@Product.IsActive" ></_EditDeleteButtonComponent>
+    </div>
+</div>
+
+@code {
+
+}

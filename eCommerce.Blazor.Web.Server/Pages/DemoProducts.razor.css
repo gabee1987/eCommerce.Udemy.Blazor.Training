@@ -28,9 +28,3 @@
 .property-value {
     margin-left: 1rem;
 }
-
-.card-buttons {
-    display: flex;
-    justify-content: flex-end;
-    /*border-top: 1px solid rgba(0,0,0,.125);*/
-}
