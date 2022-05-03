@@ -13,7 +13,7 @@
             <div class="demo-products-grid">
                 @foreach ( var prod in Products )
                 {
-                    <_DemoProductComponent Product="@prod"></_DemoProductComponent>
+                    <_DemoProductComponent Product="@prod" OnFavouriteUpdated="FavouriteCountUpdate"></_DemoProductComponent>
                 }
             </div>
         </div>
