@@ -1,5 +1,8 @@
-﻿<a class="btn btn-danger">Delete</a>
-<a class="btn btn-primary">Edit</a>
+﻿@if( ProductIsActive ) {
+    <a class="btn btn-danger">Delete</a>
+    <a class="btn btn-primary">Edit</a>
+}
+
 
 @code {
 
